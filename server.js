@@ -2,6 +2,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import userRoutes from './routes/userRoutes.js'
+import employeeRoutes from './routes/employeeRoutes.js'
 import cookieParser from "cookie-parser";
 const app = express();
 import dotenv from 'dotenv'
@@ -11,6 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cookieParser())
 app.use('/users',userRoutes)
+app.use('/users/emp',employeeRoutes)
 
 
 
