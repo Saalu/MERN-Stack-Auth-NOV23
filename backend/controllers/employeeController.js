@@ -73,8 +73,7 @@ deleteEmp:async(req,res)=>{
     }
 },
 
-updateEmp: async(req,res) =>{
-    
+updateEmp: async(req,res) =>{   
     try {
     const {employeeID, firstName,lastName, position, department,salary} = req.body
     const id = req.params.id
@@ -83,7 +82,6 @@ updateEmp: async(req,res) =>{
         {firstName,lastName, position, department,salary },
         {new:true}
         )
-
     res.json({
         status:true,
         msg:'updated successfully', 
