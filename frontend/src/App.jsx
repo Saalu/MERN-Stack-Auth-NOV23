@@ -7,6 +7,7 @@ import Register from './components/Register';
 import Login from './components/Login';
 import Nav from './components/Nav';
 import Home from './components/Home';
+import Dashboard from './components/Dashboard';
 
 
 function App() {
@@ -15,11 +16,12 @@ function App() {
     <div className=''>
     {/* <div className='flex justify-center items-center'> */}
     {/* <h1 classN ame='text-lg'>Hello</h1> */}
-    <Nav/>
+    {/* <Nav/> */}
 
     <Routes>
       <Route path='/login' element={<Login/>} />
       <Route path='/' element={ <Home/>} />
+      <Route path='/dashboard' element={ <Dashboard/>} />
       <Route path='/register' element={ <Register/>} />
     </Routes>
     
